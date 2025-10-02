@@ -1,28 +1,35 @@
 # Arquivos temporários e de log
-*.log
-*.tmp
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Arquivos de sistema
 *.swp
 *.swo
 *.DS_Store
+.byebug_history
+.pry_history
+
+# SQLite (se estiver usando)
+*.sqlite3
+*.sqlite3-journal
+
+# Arquivos de credenciais ou configs locais
+/config/master.key
+/config/credentials.yml.enc
+.env
+.env.*
 
 # Bundler
 /.bundle
 /vendor/bundle
 
-# Gems compiladas
-*.gem
-.node_modules
-# Arquivos de cobertura de testes
+# Node (se usar Webpacker ou JS no projeto)
+/node_modules
+/yarn-error.log
+
+# Cobertura de testes
 /coverage/
-/spec/reports/
-/test/tmp/
-/test/version_tmp/
-/tmp
-
-# Byebug / Pry
-.byebug_history
-.pry_history
-
-# Configurações locais
-.env
-.env.local
+/spec/tmp/*
+/spec/reports/*
